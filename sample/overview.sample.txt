@@ -1,0 +1,30 @@
+Antigravity 對話總覽（第二段 · 續接 transcript.jsonl）
+匯出時間：2026-05-01 16:45:00
+對話 ID：a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d
+
+[Step 13] User (2026-05-01 16:35:02):
+謝謝！最後可以幫我把這個腳本打包成 Windows 的獨立執行檔（.exe）嗎？不想每次都打 python 指令。
+
+[Step 14] Antigravity Agent (2026-05-01 16:35:19):
+沒問題！我建議使用 **PyInstaller** 來打包，它會把 Python 直譯器與所有依賴一起封裝成單一執行檔。
+
+計畫如下：
+
+1. 確認 PyInstaller 已安裝
+2. 執行打包指令（單檔模式 + 移除主控台視窗可選）
+3. 驗證產出的 dist/convert_images.exe 可正常運作
+
+[Step 15] Antigravity Agent (2026-05-01 16:35:40):
+偵測到目前環境是 Linux，無法直接產出 Windows .exe。我提供兩個方案：
+
+- 方案 A：在 Windows 機器上執行 `pip install pyinstaller` 後再執行 `pyinstaller --onefile convert_images.py`
+- 方案 B：寫一個 build.bat 一鍵打包腳本，你帶回 Windows 執行即可
+
+[Step 16] User (2026-05-01 16:36:15):
+用方案 B，幫我寫 build.bat。
+
+[Step 17] Antigravity Agent (2026-05-01 16:36:30):
+已建立 `build.bat`，內容包含：建立虛擬環境、安裝依賴、執行 PyInstaller 打包。只要雙擊執行，完成後 `dist\convert_images.exe` 就是你的獨立執行檔。
+
+[Step 18] User (2026-05-01 16:38:02):
+完美，全部搞定，謝謝你的協助！
